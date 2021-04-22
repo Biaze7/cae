@@ -73,7 +73,7 @@ def test(cfg: Namespace) -> None:
 
         #y = T.cat((img[0], out), dim=2)
         #y = T.cat((out), dim=0)
-        y = T.(img[], out)
+        y = (img[], out)
         save_imgs(
             imgs=y.unsqueeze(0),
             to_size=(3, 768, 2 * 1280),
