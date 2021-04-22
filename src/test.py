@@ -75,7 +75,8 @@ def test(cfg: Namespace) -> None:
         #y = T.cat((out), dim=0)
         y = (img, out)
         save_imgs(
-            imgs=y.unsqueeze(0),
+            #imgs=y.unsqueeze(0),
+            imgs=y,
             to_size=(3, 768, 2 * 1280),
             name=exp_dir / f"out/test_{batch_idx}.png",
         )
