@@ -71,12 +71,10 @@ def test(cfg: Namespace) -> None:
         out = np.reshape(out, (768, 1280, 3))
         out = np.transpose(out, (2, 0, 1))
 
-        #y = T.cat((img[0], out), dim=2)
+        y = T.cat((img[0], out), dim=2)
         #y = T.cat((out), dim=0)
-        y = (img, out)
         save_imgs(
-            #imgs=y.unsqueeze(0),
-            imgs=y,
+            imgs=y.unsqueeze(0),
             to_size=(3, 768, 2 * 1280),
             name=exp_dir / f"out/test_{batch_idx}.png",
         )
