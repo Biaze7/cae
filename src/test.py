@@ -71,7 +71,8 @@ def test(cfg: Namespace) -> None:
         out = np.reshape(out, (768, 1280, 3))
         out = np.transpose(out, (2, 0, 1))
 
-        y = T.cat((img[0], out), dim=2)
+        #y = T.cat((img[0], out), dim=2)
+        y = T.cat((None, out), dim=2)
         #y = T.cat((out), dim=0)
         save_imgs(
             imgs=y.unsqueeze(0),
