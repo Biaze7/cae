@@ -71,14 +71,22 @@ def test(cfg: Namespace) -> None:
         out = np.reshape(out, (768, 1280, 3))
         out = np.transpose(out, (2, 0, 1))
 
-        y = T.cat((img[0], out), dim=2)
-        #y = T.cat((img[0], out), dim=1)
-        #y = T.cat((img[0], out), dim=0)
-        #y = T.cat((img[0], out), dim=-2)
-        #y = T.cat((out), dim=0)
+        #IMAGENS CONCATENADAS
+        #y = T.cat((img[0], out), dim=2)
+        #y = T.cat((img[0], out), dim=1)   MEU TESTE
+        #y = T.cat((img[0], out), dim=0)   MEU TESTE
+        #y = T.cat((img[0], out), dim=-2)  MEU TESTE
+        #y = T.cat((out), dim=0)           MEU TESTE
+        #save_imgs(
+            #imgs=y.unsqueeze(0),
+            #to_size=(3, 768, 2 * 1280),
+            #name=exp_dir / f"out/test_{batch_idx}.png",
+        #)
+        
+        #SOMENTE IMAGEM RECONSTRUÍDA
         save_imgs(
-            imgs=y.unsqueeze(0),
-            to_size=(3, 768, 2 * 1280),
+            imgs=out.unsqueeze(0),
+            to_size=(3, 768, 1280),
             name=exp_dir / f"out/test_{batch_idx}.png",
         )
 
