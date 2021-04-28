@@ -100,7 +100,7 @@ def train(cfg: Namespace) -> None:
                         batch_idx,
                         len(dataloader),
                         avg_loss / cfg.batch_every,
-                        torch.stack(model.encoded),
+                        T.stack(model.encoded),
                         
                     )
                 )
