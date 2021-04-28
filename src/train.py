@@ -93,9 +93,6 @@ def train(cfg: Namespace) -> None:
                     tb_writer.add_histogram(name, param, ts)
 
                 logger.debug(
-                with nn.Session() as sess:
-                    result = model.encoded.eval()
-                    print(result)
                     "[%3d/%3d][%5d/%5d] avg_loss: %.8f"
                     % (
                         epoch_idx,
@@ -103,7 +100,7 @@ def train(cfg: Namespace) -> None:
                         batch_idx,
                         len(dataloader),
                         avg_loss / cfg.batch_every,
-                        #model.encoded,
+                        IntTensor.model.encoded.item(),
                         
                     )
                 )
