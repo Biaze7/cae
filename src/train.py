@@ -100,7 +100,7 @@ def train(cfg: Namespace) -> None:
                         batch_idx,
                         len(dataloader),
                         avg_loss / cfg.batch_every,
-                        model.encoded.size,
+                        model.encoded.size(),
                         
                     )
                 )
