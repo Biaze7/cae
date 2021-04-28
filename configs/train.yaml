@@ -11,7 +11,7 @@ epoch_every: 1
 shuffle: true
 #dataset_path: /home/alex/workspace/ml-data/cae/datasets/yt_small_720p
 #dataset_path: C:\Users\debor\Downloads\yt_small_720p
-#dataset_path: /content/drive/MyDrive/yt_small_720p
-dataset_path: /content/drive/MyDrive/ResizeTrain
+dataset_path: /content/drive/MyDrive/yt_small_720p
+#dataset_path: /content/drive/MyDrive/ResizeTrain
 num_workers: 2
 device: cuda
