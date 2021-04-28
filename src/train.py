@@ -92,12 +92,7 @@ def train(cfg: Namespace) -> None:
                 for name, param in model.named_parameters():
                     tb_writer.add_histogram(name, param, ts)
 
-                logger.debug(
-                    q=model.encoded
-                    #q.tolist()
-                    q.flatten().tolist()
-                    q[0].tolist()
-                    
+                logger.debug(                  
                     "[%3d/%3d][%5d/%5d] avg_loss: %.8f"
                     % (
                         epoch_idx,
