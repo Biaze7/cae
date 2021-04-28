@@ -93,15 +93,17 @@ def train(cfg: Namespace) -> None:
                     tb_writer.add_histogram(name, param, ts)
 
                 logger.debug(
-                    "[%3d/%3d][%5d/%5d] avg_loss: %.8f selfE: %5d selfD: %5d"
+                    "[%3d/%3d][%5d/%5d] avg_loss: %.8f selfE: %5d selfD: %5d selfEt: %.8f  selfDt: %.8f"
                     % (
                         epoch_idx,
                         cfg.num_epochs,
                         batch_idx,
                         len(dataloader),
                         avg_loss / cfg.batch_every,
-                        self.encoded,
-                        self.decode,
+                        model.encoded,
+                        model.decode,
+                        model.encoded,
+                        model.decode,
                     )
                 )
 
