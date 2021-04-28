@@ -94,7 +94,7 @@ def train(cfg: Namespace) -> None:
 
                 logger.debug(
                     ten=torch.model.encoded()
-                    ten.item()
+                    tenta=ten.item()
                     "[%3d/%3d][%5d/%5d] avg_loss: %.8f"
                     % (
                         epoch_idx,
