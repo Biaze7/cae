@@ -94,8 +94,10 @@ def train(cfg: Namespace) -> None:
 
                 logger.debug(
                     q=model.encoded
-                    q.tolist()
+                    #q.tolist()
                     q.flatten().tolist()
+                    q[0].tolist()
+                    
                     "[%3d/%3d][%5d/%5d] avg_loss: %.8f"
                     % (
                         epoch_idx,
