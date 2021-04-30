@@ -4,7 +4,7 @@ exp_name: testing
 batch_every: 100
 shuffle: false
 #dataset_path: /home/alex/workspace/ml-data/cae/datasets/testing
-dataset_path: /content/drive/MyDrive/testing
-#dataset_path: /content/drive/MyDrive/ResizeTest
+#dataset_path: /content/drive/MyDrive/testing
+dataset_path: /content/drive/MyDrive/ResizeTest
 num_workers: 1
 device: cuda
